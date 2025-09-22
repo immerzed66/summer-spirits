@@ -1,0 +1,261 @@
+/* General Styling and Fonts */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Header Section */
+.header {
+    width: 100%;
+    height: 350px;
+    background-image: url('album-art.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.album-art-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.album-art {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 3px solid white;
+}
+
+.header-buttons {
+    margin-top: 20px;
+}
+
+.follow-btn, .share-btn {
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.follow-btn:hover, .share-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content Layout */
+.content-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.sidebar {
+    width: 300px;
+    padding-right: 40px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.album-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.artist-name {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #555;
+    margin-top: 0;
+}
+
+.get-music-text {
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.stream-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.stream-btn, .buy-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.stream-btn i, .buy-link i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.stream-btn:hover, .buy-link:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+.buy-link {
+    background-color: #000;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.buy-link:hover {
+    background-color: #1a1a1a;
+}
+
+.bio-text {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 30px;
+}
+
+.release-date {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 10px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #666;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #000;
+}
+
+/* Track List Section */
+.track-list {
+    flex-grow: 1;
+    max-width: 600px;
+    padding-left: 40px;
+}
+
+.track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.track:hover {
+    background-color: #f9f9f9;
+}
+
+.track:last-child {
+    border-bottom: none;
+}
+
+.play-btn {
+    background-color: transparent;
+    border: none;
+    color: #555;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.play-btn:hover {
+    color: #000;
+}
+
+.track-info {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.track-name {
+    display: block;
+    font-weight: 600;
+}
+
+.track-artist {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.track-duration {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-width: 400px;
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .track-list {
+        width: 100%;
+        max-width: 600px;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .album-art {
+        width: 200px;
+        height: 200px;
+    }
+    .header-buttons {
+        display: flex;
+        justify-content: center;
+    }
+    .follow-btn, .share-btn {
+        font-size: 0.8rem;
+    }
+}
